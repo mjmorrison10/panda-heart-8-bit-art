@@ -7,22 +7,26 @@ PandaWrapper.addEventListener("click", () => {
   // Panda.classList.toggle("heart");
   // for (let i = 0; i < 20; i++) {
   // setTimeout(() => {
-  // console.log("test");
   // Panda.classList.toggle("heart");
   // }, 1000);
   // }
   Panda.classList.toggle("heart");
   Text.style.display = "block";
   Header.innerHTML = "Wait for it...";
-  
+  Text.innerHTML = "I love you";
+  Text.style.fontSize = "4.5rem";
+  Text.style.top = "0";
+  Text.style.bottom = "inherit";
+  Text.style.color = "black";
+  Text.style.webkitTextStroke = "1px white";
+  Text.style.textShadow = "0 0px 0px transparent";
+
   var time = 1;
-  
+
   var interval = setInterval(function () {
     if (time <= 10) {
       Panda.classList.toggle("heart");
       Text.style.display = Text.style.display === "block" ? "none" : "block";
-      console.log("test");
-      // alert(time);
       time++;
     } else {
       Panda.classList.remove("heart");
@@ -34,10 +38,8 @@ PandaWrapper.addEventListener("click", () => {
       Text.style.color = "white";
       Text.style.webkitTextStroke = "2px black";
       Text.style.textShadow = "0 -5px 20px black";
-      Header.innerHTML = "Click to tap to replay!";
+      Header.innerHTML = "Click or tap to replay!";
       clearInterval(interval);
     }
   }, 1000);
 });
-
-
